@@ -71,7 +71,7 @@ export default function Header() {
             animate={{ fontSize: scrolled ? "0.95rem" : "1.15rem" }}
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
           >
-            ProjetSass
+            Draft AI
           </motion.span>
         </Link>
 
