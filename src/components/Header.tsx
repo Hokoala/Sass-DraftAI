@@ -35,12 +35,10 @@ export default function Header() {
       }}
       transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
       style={{
-        border: scrolled
-          ? "1px solid var(--border)"
-          : "none",
-        borderBottom: scrolled
-          ? "1px solid var(--border)"
-          : "1px solid var(--border)",
+        borderTop: scrolled ? "1px solid var(--border)" : "none",
+        borderRight: scrolled ? "1px solid var(--border)" : "none",
+        borderBottom: scrolled ? "1px solid var(--border)" : "none",
+        borderLeft: scrolled ? "1px solid var(--border)" : "none",
       }}
     >
       <motion.div
@@ -67,16 +65,16 @@ export default function Header() {
 
         <nav className="flex items-center gap-1 rounded-full px-2 py-1 bg-muted/60">
           <Link href="/" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
-            Home
+            Accueil
           </Link>
           <Link href="#how-it-works" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
-            How it Works
+            Comment ça marche
           </Link>
           <Link href="#features" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
-            Features
+            Fonctionnalités
           </Link>
           <Link href="#pricing" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
-            Pricing
+            Tarifs
           </Link>
         </nav>
 
