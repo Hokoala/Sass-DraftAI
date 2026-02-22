@@ -68,7 +68,7 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="border-y border-border">
+    <section id="how-it-works" className="border-y border-border">
       {/* Label centré */}
       <div className="text-center py-8 border-b border-border">
         <p className="text-muted-foreground text-sm font-medium tracking-wide">
