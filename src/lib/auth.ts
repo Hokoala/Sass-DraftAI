@@ -7,7 +7,7 @@ dns.setDefaultResultOrder("ipv4first");
 export const auth = betterAuth({
   database: new Pool({
     host: process.env.DB_HOST!,
-    port: 5432,
+    port: 6543,
     user: process.env.DB_USER!,
     password: process.env.DB_PASSWORD,
     database: "postgres",
