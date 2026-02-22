@@ -4,18 +4,18 @@ import { NextRequest } from "next/server";
 
 const handler = toNextJsHandler(auth);
 
-export async function POST(req: NextRequest, ctx: { params: Promise<Record<string, string>> }) {
+export async function POST(req: NextRequest) {
   try {
-    return await handler.POST(req, ctx);
+    return await handler.POST(req);
   } catch (err) {
     console.error("[AUTH POST ERROR]", err);
     throw err;
   }
 }
 
-export async function GET(req: NextRequest, ctx: { params: Promise<Record<string, string>> }) {
+export async function GET(req: NextRequest) {
   try {
-    return await handler.GET(req, ctx);
+    return await handler.GET(req);
   } catch (err) {
     console.error("[AUTH GET ERROR]", err);
     throw err;
