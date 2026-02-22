@@ -64,10 +64,6 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Bas de colonne */}
-            <p className="text-muted-foreground/50 text-xs mt-10 md:mt-0">
-              Fait avec ❤️ pour les freelances
-            </p>
           </div>
 
           {/* ── COLONNES LIENS ── */}

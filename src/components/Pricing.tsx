@@ -115,7 +115,7 @@ export default function Pricing() {
   const [billing, setBilling] = useState<"yearly" | "monthly">("yearly");
 
   return (
-    <section className="py-20">
+    <section id="pricing" className="py-20">
       {/* En-tête */}
       <div className="text-center mb-14 px-4">
         <h2 className="text-foreground font-bold text-4xl sm:text-5xl lg:text-[3.2rem] leading-tight tracking-tight mb-5">

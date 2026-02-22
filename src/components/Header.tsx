@@ -80,10 +80,7 @@ export default function Header() {
           <Link href="/" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
             Accueil
           </Link>
-          <Link href="#how-it-works" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
-            Comment ça marche
-          </Link>
-          <Link href="#features" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
+<Link href="#features" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
             Fonctionnalités
           </Link>
           <Link href="#pricing" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-accent">
@@ -133,6 +130,17 @@ export default function Header() {
                     {/* Actions */}
                     <div className="p-1.5 flex flex-col gap-0.5">
                       <Link
+                        href="/profile"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-foreground/70 hover:text-foreground hover:bg-accent transition-colors"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                          <circle cx="12" cy="8" r="4" />
+                          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                        </svg>
+                        Mon profil
+                      </Link>
+                      <Link
                         href="/generate"
                         onClick={() => setDropdownOpen(false)}
                         className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-foreground/70 hover:text-foreground hover:bg-accent transition-colors"
@@ -143,7 +151,7 @@ export default function Header() {
                         Générateur
                       </Link>
                       <Link
-                        href="#pricing"
+                        href="/#pricing"
                         onClick={() => setDropdownOpen(false)}
                         className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-foreground/70 hover:text-foreground hover:bg-accent transition-colors"
                       >
@@ -154,6 +162,22 @@ export default function Header() {
                         Mon plan
                       </Link>
                     </div>
+
+                    {/* Admin (seulement pour l'admin) */}
+                    {session.user.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL && (
+                      <div className="p-1.5 border-t border-border">
+                        <Link
+                          href="/admin"
+                          onClick={() => setDropdownOpen(false)}
+                          className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm text-red-500 hover:bg-red-500/10 transition-colors"
+                        >
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                          </svg>
+                          Admin
+                        </Link>
+                      </div>
+                    )}
 
                     {/* Déconnexion */}
                     <div className="p-1.5 border-t border-border">
