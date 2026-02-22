@@ -1,6 +1,7 @@
 import dns from "node:dns";
 import { betterAuth } from "better-auth";
-import { Pool } from "pg";
+// eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-explicit-any
+const { Pool } = require("pg") as any;
 
 dns.setDefaultResultOrder("ipv4first");
 
