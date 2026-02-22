@@ -44,8 +44,9 @@ export default function LoginPage() {
         }
       }
       router.push("/");
-    } catch {
-      setError("Une erreur est survenue");
+    } catch (err) {
+      console.error("[LOGIN ERROR]", err);
+      setError(err instanceof Error ? err.message : "Une erreur est survenue");
     } finally {
       setLoading(false);
     }
